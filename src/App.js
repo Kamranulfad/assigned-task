@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+// import { useState } from "react";
+import "./App.css";
+import Login from "./login";
+import Signup from "./signup";
+import Home from "./home";
 
 function App() {
+  // const [toggle, setToggle] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      {/* {toggle ? <Signup /> : <Login />} */}
+  
+      {/* <button onClick={() => setToggle(!toggle)}>
+        {toggle ? "Go to Login" : "Go to Signup"}
+      </button> */}
+      <Routes>
+        <Route path="/" element={<Login/>}></Route>
+        <Route path="/signup" element={<Signup/>}> </Route>
+        <Route path="/home" element={<Home />}> </Route>
+      </Routes>
     </div>
   );
 }
