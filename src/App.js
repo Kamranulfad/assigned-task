@@ -1,26 +1,18 @@
+// ✅ App.js
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-// import { useState } from "react";
-import "./App.css";
-import Login from "./login";
-import Signup from "./signup";
-import Home from "./home";
+import Signup from "./components/auth/Signup";
+import Login from "./components/auth/Login";
+import Home from "./components/auth/home";
 
 function App() {
-  // const [toggle, setToggle] = useState(true);
-
   return (
-    <div className="main-container">
-      {/* {toggle ? <Signup /> : <Login />} */}
-  
-      {/* <button onClick={() => setToggle(!toggle)}>
-        {toggle ? "Go to Login" : "Go to Signup"}
-      </button> */}
-      <Routes>
-        <Route path="/" element={<Login/>}></Route>
-        <Route path="/signup" element={<Signup/>}> </Route>
-        <Route path="/home" element={<Home />}> </Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
   );
 }
 

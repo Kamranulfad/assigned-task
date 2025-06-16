@@ -1,0 +1,40 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.home-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.home-main {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.home-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .home-main {
+    padding: 1rem;
+  }
+
+  .home-header h1,
+  .home-main h2,
+  .home-main h3 {
+    font-size: 1.2rem;
+  }
+}
