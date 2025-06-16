@@ -50,6 +50,7 @@ export default function Login() {
       <p className="login-footer-text">
         Don't have an account? <Link to="/signup">Sign up</Link>
       </p>
+      <p>add  a new paragraph in login page</p>
     </div>
   );
 }
